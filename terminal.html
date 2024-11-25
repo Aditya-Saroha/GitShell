@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitShell Terminal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="terminal-container">
+        <div class="fakeMenu">
+            <!-- Fake window buttons (red, yellow, green) -->
+            <div class="fakeButtons close"></div>
+            <div class="fakeButtons minimize"></div>
+            <div class="fakeButtons zoom"></div>
+        </div>
+
+        <div class="fakeScreen">
+            <!-- Welcome message and input area -->
+            <div id="output-container">
+                <!-- Welcome message with no blinking cursor -->
+                <div class="git-shell-command1"></div>
+                <div class="git-shell-command2"></div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

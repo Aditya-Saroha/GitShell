@@ -1,0 +1,134 @@
+/* Body and background setup */
+body {
+    background-color: #2e2e2e; /* Lighter gray background for the whole page */
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Terminal container */
+.terminal-container {
+    width: 550px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #111419; /* Darker background specifically for the terminal */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Shadow to add depth and distinguish the terminal */
+}
+
+/* Fake top menu with buttons */
+.fakeMenu {
+    height: 25px;
+    background-color: #3a3a3a; /* Dark menu background */
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.fakeButtons {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+    background-color: #ff3b47; /* Default red button */
+    cursor: pointer;
+}
+
+.fakeButtons.close {
+    background-color: #ff3b47; /* Red button for close */
+}
+
+.fakeButtons.minimize {
+    background-color: #ffc100; /* Yellow button for minimize */
+}
+
+.fakeButtons.zoom {
+    background-color: #00d742; /* Green button for zoom */
+}
+
+/* Fake terminal screen */
+.fakeScreen {
+    background-color: #1a1a1a; /* Terminal screen background */
+    height: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    position: relative;
+}
+
+/* Output container styles */
+#output-container {
+    width: 100%;
+    flex-grow: 1;
+    overflow-y: auto;
+    color: #e6f1ff; /* Light blue for output text */
+}
+
+/* Hot pink for GitShell prompt text */
+.git-shell-prompt {
+    color: #f54588; /* Hot pink color */
+    font-weight: bold;
+    display: inline;
+}
+
+/* Command text color and no blinking cursor for the command */
+.git-shell-command1 {
+    color: #a85ef1; /* Purple color for command */
+    font-weight: bold;
+    width: auto;
+}
+.git-shell-command2 {
+    color: #13b6d4; /* Purple color for command */
+    font-weight: bold;
+    width: auto;
+}
+
+#input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #e6f1ff; /* Light blue for input */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px 0;
+}
+
+/* Prompt line for input and command display */
+.prompt-line {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 5px;
+}
+
+.prompt-line .git-shell-prompt {
+    margin-right: 10px; /* Add space between prompt and input */
+}
+
+
+.output{
+    color: #01a17f;
+    font-weight: 600;
+}
+
+.dot-animation {
+    color: #f54588; /* White color for the dots */
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block;
+    animation: typingDots 1.5s steps(1, end) infinite;
+}
+
+/* Keyframes for the typing dots animation */
+@keyframes typingDots {
+    0% { content: ''; }
+    33% { content: '.'; }
+    66% { content: '..'; }
+    100% { content: '...'; }
+}
